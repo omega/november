@@ -19,7 +19,7 @@ class Dispatcher {
         my $r;
         # RAKUDO: Larry -- "the default parameter to a block is now Object and 
         # not Any" but this is NIY 
-        for @rules -> Object @pattern, $action {
+        for @rules -> @pattern, $action {
             $r = self.add(@pattern, $action);
         }
         return $r;
